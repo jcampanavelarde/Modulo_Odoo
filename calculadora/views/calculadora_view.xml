@@ -28,10 +28,13 @@
           <field name="model">cyg.calculadora</field>
           <field name="arch" type="xml">
          <form string="CALCULADORA">
-           <field nolabel="1" name="name"/>
-           <field name="a"/>
-           <field name="b"/>
+           <field nolabel="1" name="name"/><newline/>
+           <field name="a" on_change="alcambiar_variables(a,b)"/><newline/>
+           <field name="b" on_change="alcambiar_variables(a,b)"/><newline/>
            <field name="total"/>
+           <field name="total_resta"/>
+           <field name="total_multi"/>
+           <field name="total_div"/>
           </form>
           </field>
         </record>

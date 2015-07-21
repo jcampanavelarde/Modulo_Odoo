@@ -1,0 +1,6 @@
+#TODO:
+
+- Cargar datos de archovs xls a tablas de base de datos.
+- Campos calculados que se guarden en base de datos.
+- Sobreescritura de create, write, unlink y copy
+- Campos obligatorios
