@@ -21,7 +21,9 @@
     "depends": [],
     "init_xml": [],
     "demo_xml": [],
-    "update_xml": [],
+    "update_xml": [
+        'views/calculadora_view.xml',
+    ],
     "application": True,
     "auto_install": False,
 }

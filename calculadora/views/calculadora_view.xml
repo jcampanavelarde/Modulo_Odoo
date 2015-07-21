@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+      <data>
+
+        <menuitem id="cyg_calculadora" name="Calculadora 2.0"
+	          sequence="1"
+	        />
+
+        <menuitem id="cyg_calc" name="Calculadora"
+	            parent="cyg_calculadora"
+	            sequence="10"/>
+
+        <record model="ir.ui.view" id="view_cyg_calculadora_search">
+          <field name="name">cyg.calculadora.search</field>
+          <field name="model">cyg.calculadora</field>
+          <field name="arch" type="xml">
+           <search>
+              <field name="name"/>
+              <field name="a"/>
+              <field name="b"/>
+              <field name="total"/>
+           </search>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_cyg_calculadora_form">
+          <field name="name">cyg.calculadora.form</field>
+          <field name="model">cyg.calculadora</field>
+          <field name="arch" type="xml">
+         <form string="CALCULADORA">
+           <field nolabel="1" name="name"/>
+           <field name="a"/>
+           <field name="b"/>
+           <field name="total"/>
+          </form>
+          </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_cyg_calculadora_tree">
+          <field name="name">cyg.calculadora.tree</field>
+          <field name="model">cyg.calculadora</field>
+          <field name="arch" type="xml">
+          <tree string="Calculadora">
+              <field name="name"/>
+          </tree>
+          </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_cyg_calculadora">
+          <field name="name">Calculadora</field>
+          <field name="res_model">cyg.calculadora</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="search_view_id" ref="view_cyg_calculadora_search"/>
+        </record>
+
+        <menuitem name="Calc" id="menu_cyg_calculadora"
+              parent="cyg_calc" action="action_cyg_calculadora"
+              sequence="10"/>
+      </data>
+</openerp>
